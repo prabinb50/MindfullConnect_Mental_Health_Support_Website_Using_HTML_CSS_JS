@@ -1,0 +1,342 @@
+.swiper .container{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 1 !important;
+}
+
+.swiper .container .content-container{
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.swiper .container .content-container .content{
+    color: white;
+    text-align: center;
+    width: 50%;
+}
+.swiper .container .content-container .content h2{
+    letter-spacing: 2px;
+}
+.swiper .container .content-container .content p{
+    margin-top: 10px;
+    letter-spacing: 1px;
+    line-height: 1.4;
+}
+
+
+.swiper .container .img-div{
+    width: 100%;
+    height: 100%;
+}
+.swiper .container .img-div img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    filter: brightness(.3);
+}
+
+.swiper{
+    height: 75vh;
+    position: relative;
+    z-index: 1 !important;
+    
+}
+
+.swiper-wrapper{
+    height: 100%;
+    position: relative;
+    z-index: 1 !important;
+    
+
+}
+
+.swiper-slide{
+    height: 100%;
+    position: relative;
+    z-index: 1 !important;
+    
+
+}
+
+.swiper .hero-swiper-button-next {
+    position: absolute;
+    z-index: 10;
+    top: 50%; /* Equivalent to top-1/2 */
+    right: 0.5rem; /* Equivalent to right-0.5 */
+    border: 2px solid white;
+    background-color: white;
+    color: black;
+    border-radius: 9999px; /* Equivalent to rounded-full */
+    padding: 8px 10px; /* Equivalent to px-2 and py-[3px] */
+    transition: background-color 0.3s linear, color 0.3s linear;
+    cursor: pointer; /* Equivalent to transit duration-300 ease-linear */
+}
+
+.swiper .hero-swiper-button-next:hover {
+    background-color: transparent;
+    color: white;
+}
+
+.swiper .hero-swiper-button-prev {
+    position: absolute;
+    z-index: 10;
+    top: 50%; /* Equivalent to top-1/2 */
+    left: 0.5rem; /* Equivalent to right-0.5 */
+    border: 2px solid white;
+    background-color: white;
+    color: black;
+    border-radius: 9999px; /* Equivalent to rounded-full */
+    padding: 8px 10px; /* Equivalent to px-2 and py-[3px] */
+    transition: background-color 0.3s linear, color 0.3s linear;
+    cursor: pointer; /* Equivalent to transit duration-300 ease-linear */
+}
+
+.swiper .hero-swiper-button-prev:hover {
+    background-color: transparent;
+    color: white;
+}
+
+
+.hero-swiper {
+    width: 100%;
+  }
+  
+  
+  .hero-swiper .swiper-slide {
+    background-position: center;
+    background-size: cover;
+  }
+  .hero-swiper .swiper-slide img{
+    transition: all 15s;
+  }
+  
+  .hero-swiper .swiper-slide-active img{
+    scale: 1.25;
+  }
+  
+  .hero-swiper  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+  
+  .hero-swiper-pagination .swiper-pagination-bullet{
+      height: 10px !important;
+      width: 10px !important;
+      background-color: white !important;
+      opacity: 1 !important;
+      transition: all 0.5s ease;
+      border-radius: 5px !important;
+    }
+    
+    .hero-swiper-pagination .swiper-pagination-bullet-active{
+    width: 30px !important;
+  }
+  
+  .hero-swiper-button-prev[aria-disabled="true"] {
+    opacity: 0.5 !important;
+    pointer-events: none;
+  }
+  .hero-swiper-button-next[aria-disabled="true"] {
+    opacity: 0.5 !important;
+    pointer-events: none;
+  }
+
+
+  /* resources div */
+
+  
+/* resources css */
+
+.content .resources-div {
+  margin-top: 50px;
+}
+
+.content .resources-div .title{
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.content .resources-div .main-title-div{
+  display: flex;
+  justify-content: center;
+}
+
+.content .resources-div .main-title{
+  padding: 10px 20px;
+  border-radius: 13px;
+  background-color:  rgb(211, 211, 211) ;
+  border: 2px solid black;
+}
+
+.content .resources-div .container{
+  display: grid;
+  margin-top: 20px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 40px;
+}
+.content .resources-div .container .card{
+  background-color: rgb(211, 211, 211);
+  
+border-radius: 13px;
+  box-shadow: -4px 5px 16px -2px rgba(0,0,0,0.75);
+-webkit-box-shadow: -4px 5px 16px -2px rgba(0,0,0,0.75);
+-moz-box-shadow: -4px 5px 16px -2px rgba(0,0,0,0.75);
+transition: all 0.5s ease;
+}
+
+.content .resources-div .container .card:hover{
+  background-color: rgb(170, 170, 170);
+}
+
+
+.content .resources-div .container .card img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-top-left-radius: 13px;  /* Top-left corner */
+  border-top-right-radius: 13px; 
+}
+
+.content .resources-div .container .card h2{
+  margin: 20px 20px;
+  font-size: 20px;
+  overflow: hidden;
+display: -webkit-box;
+-webkit-box-orient: vertical;
+-webkit-line-clamp: 2;
+}
+
+.content .resources-div .container .card a{
+  text-decoration: none;
+  color: black;
+}
+
+
+.podcast-container{
+  margin-top: 50px;
+}
+
+.article-container{
+  margin: 150px 0;
+}
+
+
+.videos-container .card video{
+  width: 100%;
+  height: 100%;
+  border-top-left-radius: 13px;
+  border-top-right-radius: 13px;
+}
+
+/* article */
+
+/* Global Styles */
+
+
+/* Article Styling */
+.article {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+  max-width: 800px;
+  padding: 20px;
+  margin-bottom: 50px;
+}
+
+.article .img-div{
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.article .img-div img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 13px;
+}
+
+.article p {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+.article ul {
+  margin: 10px 0;
+  padding: 0 20px;
+}
+
+.article li {
+  margin-bottom: 10px;
+}
+
+/* Section Styling */
+section {
+  margin-bottom: 20px;
+}
+
+/* Note Styling */
+.note {
+  background-color: #f0f8ff;
+  padding: 10px;
+  border-left: 4px solid #3498db;
+  margin-bottom: 20px;
+}
+
+/* Blockquote Styling */
+blockquote {
+  background: #ecf0f1;
+  padding: 15px;
+  border-left: 5px solid #3498db;
+  font-style: italic;
+}
+
+/* Link Styling */
+a {
+  color: #3498db;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .article {
+      padding: 15px;
+      margin: 10px;
+  }
+
+  h1 {
+      font-size: 1.8rem;
+  }
+
+  h2 {
+      font-size: 1.3rem;
+  }
+}
+
+
+@media (max-width:768px){
+  .content .resources-div .container{
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+  
+}
+
+

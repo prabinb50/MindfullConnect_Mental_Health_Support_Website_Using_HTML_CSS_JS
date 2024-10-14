@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Ubuntu&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/interactiveTools.css" />
+</head>
+
+<body>
+    <!-- header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">
+                <div class="img-div">
+                    <img src="images/logo.png" alt="" />
+                </div>
+                <div>
+                    <h2>MindFullConnect</h2>
+                </div>
+            </div>
+            <div class="mobile-nav-btn">
+                <button onclick="openNav()">
+                    <img src="images/Hamburger_icon.svg.png" alt="" />
+                </button>
+            </div>
+            <div id="mobile-nav" class="mobile-nav">
+                <div class="cross-icon">
+                    <button onclick="closeNav()">
+                        <svg fill="#000000" height="20px" width="20px" version="1.1" id="Capa_1"
+                            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            viewBox="0 0 490 490" xml:space="preserve">
+                            <polygon points="456.851,0 245,212.564 33.149,0 0.708,32.337 212.669,245.004 0.708,457.678 33.149,490 245,277.443 456.851,490 
+                            489.292,457.678 277.331,245.004 489.292,32.337 " />
+                        </svg>
+                    </button>
+                </div>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="resourcelibrary.html">Resources Library</a></li>
+                    <li>
+                        <a href="interactiveTools.html" class="active">Interactive Tools</a>
+                    </li>
+                    <li><a href="professionalTools.html">Professional Service</a></li>
+                    <li><a href="emergencyService.html">Emergency Service</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <!--end of header -->
+
+    <!-- content -->
+    <div class="content">
+        <div class="mood-tracker">
+            <div class="main-title-div">
+                <h2 class="title main-title">Mood Tracker</h2>
+            </div>
+            <div class="container">
+                <div class="card graph">
+                    <div class="graph-container">
+                        <!-- Mood History Display -->
+                    <div class="history">
+                        <h2>Mood History</h2>
+                        <ul id="mood-history"></ul>
+                    </div>
+                        <!-- Chart Section -->
+                        <canvas id="mood-chart" width="400" height="200"></canvas>
+                    </div>
+                </div>
+                <div class="card">
+                    <div>
+
+                    </div>
+                    <div class="suggestion-div">
+                        <h2>Suggestions</h2>
+                        <p>
+                            Your journey towards better mental health starts here. Take the quiz to unlock personalized mood analysis and meditation tips!
+                        </p>
+                        <div id="result" class="hidden result">
+                            <div>
+                                <h2>Your Mood Analysis</h2>
+                                <p id="moodAnalysis">NAN</p>
+                            </div>
+                            <div>
+                                <h2>Suggested Meditation</h2>
+                                <p id="meditationSuggestion">NAN</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card select-your-mood-div">
+                    <form id="mood-form">
+                        <label for="mood">Select your current mood:</label>
+                        <select id="mood" required>
+                            <option value="">--Choose Mood--</option>
+                            <option value="Happy">😊 Happy</option>
+                            <option value="Sad">😢 Sad</option>
+                            <option value="Anxious">😟 Anxious</option>
+                            <option value="Excited">🤩 Excited</option>
+                            <option value="Angry">😡 Angry</option>
+                            <option value="Relaxed">😌 Relaxed</option>
+                        </select>
+                        <button type="submit">Save Mood</button>
+                    </form>
+                    
+                </div>
+                <div class="card">
+                    <div>
+
+                    </div>
+                    <div class="quiz-button-div">
+                        <button onclick="openModal()">
+                            Start Your Quiz
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="resources-div">
+            <div class="videos-container">
+                <div class="main-title-div">
+                    <h2 class="title main-title">
+                        Videos
+                    </h2>
+                </div>
+    
+                <div class="container">
+                    <div class="card">
+                        <div class="img-div">
+                            <video src="videos/Dear Anxiety __ Spoken Word.mp4" controls></video>
+                        </div>
+                        <h2 class="title">Dear Anxiety __ Spoken Word</h2>
+                    </div>
+                    <div class="card">
+                        <div class="img-div">
+                            <video src="videos/Feeling Lost in Your 20s.mp4" controls></video>
+                        </div>
+                        <h2 class="title">Feeling Lost in Your 20s</h2>
+                    </div>
+                    <div class="card">
+                        <div class="img-div">
+                            <video src="videos/How Stop Over Thinking  _ Buddhism In English.mp4" controls></video>
+                        </div>
+                        <h2 class="title">How Stop Over Thinking  _ Buddhism In English</h2>
+                    </div>
+                    <div class="card">
+                        <div class="img-div">
+                            <video src="videos/Mental Health Awareness.mp4" controls></video>
+                        </div>
+                        <h2 class="title">Mental Health Awareness</h2>
+                    </div>
+                    <div class="card">
+                        <div class="img-div">
+                            <video src="videos/People With Anxiety & Depression Share Advice For Anyone Who s Struggling _ Soul Stories.mp4" controls></video>
+                        </div>
+                        <h2 class="title">People With Anxiety & Depression Share Advice For Anyone Who s Struggling _ Soul Stories</h2>
+                    </div>
+                    <div class="card">
+                        <div class="img-div">
+                            <video src="videos/So, You re Having an Anxiety Attack (The Calm-Down Method for Stopping Anxiety Attacks).mp4" controls></video>
+                        </div>
+                        <h2 class="title">So, You re Having an Anxiety Attack (The Calm-Down Method for Stopping Anxiety Attacks)</h2>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="article-container">
+                <div class="main-title-div">
+                    <h2 class="title main-title">
+                        Articles
+                    </h2>
+                </div>
+        
+                <div class="container">
+                    <div class="card">
+                        <a href="articles/managing-anxiety.html">
+                            <div class="img-div">
+                                <img src="images/article/anxiety.webp" alt="">
+                            </div>
+                            <h2 class="title">Managing Anxiety: Practical Tips to Calm Your Mind</h2>
+                        </a>
+                    </div>
+        
+                    <div class="card">
+                        <a href="articles/overcoming-depression.html">
+                            <div class="img-div">
+                                <img src="images/article/depression.webp" alt="">
+                            </div>
+                            <h2 class="title">Overcoming Depression: Steps to Reclaim Your Life</h2>
+                        </a>
+                    </div>
+        
+                    <div class="card">
+                        <a href="articles/living-with-ocd.html">
+                            <div class="img-div">
+                                <img src="images/article/ocd.webp" alt="">
+                            </div>
+                            <h2 class="title">Living with OCD: Understanding and Managing Obsessive-Compulsive Disorder</h2>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="articles/understanding-ptsd.html">
+                            <div class="img-div">
+                                <img src="images/article/ptsd.webp" alt="">
+                            </div>
+                            <h2 class="title">Understanding PTSD: Pathways to Healing After Trauma</h2>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="articles/managing-bipolar-disorder.html">
+                            <div class="img-div">
+                                <img src="images/article/bipolar.webp" alt="">
+                            </div>
+                            <h2 class="title">Managing Bipolar Disorder: Finding Balance in Mood Swings</h2>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="articles/feeling-like-a-future.html">
+                            <div class="img-div">
+                                <img src="images/article/feeling like a failure.webp" alt="">
+                            </div>
+                            <h2 class="title">Feeling Like a Failure</h2>
+                        </a>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="podcast-container">
+                <div class="main-title-div">
+                    <h2 class="title main-title">
+                        Podcast
+                    </h2>
+                </div>
+    
+                <div class="container">
+                    <div class="card">
+                        <a href="podcast/podcast.html?index=0">
+                            <div class="img-div">
+                                <img src="podcast/assets/images/1.webp" alt="">
+                            </div>
+                            <h2 class="title">Jordan Peterson’s Advice For People With Depression</h2>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="podcast/podcast.html?index=1">
+                            <div class="img-div">
+                                <img src="podcast/assets/images/2.webp" alt="">
+                            </div>
+                            <h2 class="title">Kristen Bell on Living with Depression and Anxiety - Body Stories - SELF</h2>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="podcast/podcast.html?index=2">
+                            <div class="img-div">
+                                <img src="podcast/assets/images/3.webp" alt="">
+                            </div>
+                            <h2 class="title">Are You Okay?</h2>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="podcast/podcast.html?index=3">
+                            <div class="img-div">
+                                <img src="podcast/assets/images/4.webp" alt="">
+                            </div>
+                            <h2 class="title">WHEN YOU FEEL LIKE QUITTING - Best Inspiring Speech on Mental Health</h2>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="podcast/podcast.html?index=4">
+                            <div class="img-div">
+                                <img src="podcast/assets/images/5.webp" alt="">
+                            </div>
+                            <h2 class="title">Complex PTSD in 5 Minutes</h2>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="podcast/podcast.html?index=5">
+                            <div class="img-div">
+                                <img src="podcast/assets/images/6.webp" alt="">
+                            </div>
+                            <h2 class="title">What is Depression? - Helen M. Farrell</h2>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--end of content -->
+
+    <!-- quiz modal -->
+    <div class="quiz-modal" id="quiz-modal">
+        <div class="quiz-modal-card">
+            <div class="cross-icon" onclick="closeModal()">
+                <i class="fas fa-xmark"></i>
+            </div>
+            <h1>Mental Health Self-Assessment Quiz</h1>
+            <form id="quizForm">
+                <div id="questionsContainer" class="question-container">
+                    <!-- Questions will be dynamically generated here -->
+                </div>
+                <button type="submit">Submit Quiz</button>
+            </form>
+           
+        </div>
+    </div>
+    <!--end of quiz modal -->
+
+    <!-- footer section -->
+    <div class="footer-section">
+        <div class="container">
+            <div class="card">
+                <div class="first-section">
+                    <div class="img-div">
+                        <img src="images/logo.png" alt="" />
+                    </div>
+                    <h2 class="title">MindFullConnect</h2>
+                </div>
+            </div>
+
+            <div class="card quick-links-section">
+                <div>
+                    <h2 class="">QUICK LINKS</h2>
+                    <ul>
+                        <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="resourcelibrary.html">Resources Library</a></li>
+                    <li><a href="interactiveTools.html">Interactive Tools</a></li>
+                    <li><a href="professionalTools.html">Professional Service</a></li>
+                    <li><a href="emergencyService.html">Emergency Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card social-media-section">
+                <div class="">
+                    <h2 class="">Socials</h2>
+                    <div class="social-medias">
+                        <div class="facebook-icon">
+                            <i class="fa-brands fa-facebook"></i>
+                        </div>
+                        <div class="instagram-icon">
+                            <i class="fa-brands fa-instagram"></i>
+                        </div>
+                        <div class="twitter-icon">
+                            <i class="fa-brands fa-twitter"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bottom-footer">
+        <h2>
+            Copyright © 2024 <span>MindFullConnect</span>. All Rights Reserved
+        </h2>
+    </div>
+    <!--end of footer section -->
+</body>
+
+<script>
+        let moodChart;
+    function closeNav() {
+        var mobileNav = document.getElementById("mobile-nav");
+        mobileNav.classList.remove("active");
+    }
+    function openNav() {
+        var mobileNav = document.getElementById("mobile-nav");
+        mobileNav.classList.add("active");
+    }
+
+    function openModal() {
+        var modal = document.getElementById("quiz-modal");
+        modal.style.display = "flex";
+        loadQuiz();
+    }
+    function closeModal() {
+        var modal = document.getElementById("quiz-modal");
+        modal.style.display = "none";
+        resetQuiz();
+    }
+
+    function updateMoodHistory() {
+        const moodHistory = document.getElementById("mood-history");
+        const moods = JSON.parse(localStorage.getItem("moodTracker")) || [];
+            moodHistory.innerHTML = "";
+            // Get the latest 2 mood entries
+            const latestMoods = moods.slice(-2);
+            console.log(latestMoods);
+            latestMoods.forEach((entry) => {
+                const li = document.createElement("li");
+                // Display date, time, and mood
+                li.textContent = `${entry.date} ${entry.time}: ${entry.mood}`;
+                moodHistory.appendChild(li);
+            });
+        }
+
+        // Generate or update the mood chart using Chart.js
+        function updateChart() {
+            const moodChartCtx = document
+            .getElementById("mood-chart")
+            .getContext("2d");
+        const moods = JSON.parse(localStorage.getItem("moodTracker")) || [];
+            const moodCounts = moods.reduce((acc, { mood }) => {
+                acc[mood] = (acc[mood] || 0) + 1;
+                return acc;
+            }, {});
+
+            // If the chart already exists, update its data
+            if (moodChart) {
+                moodChart.data.labels = Object.keys(moodCounts);
+                moodChart.data.datasets[0].data = Object.values(moodCounts);
+                moodChart.update();
+            } else {
+                // Create the chart for the first time
+                moodChart = new Chart(moodChartCtx, {
+                    type: "bar",
+                    data: {
+                        labels: Object.keys(moodCounts),
+                        datasets: [
+                            {
+                                label: "Mood Frequency",
+                                data: Object.values(moodCounts),
+                                backgroundColor: [
+                                    "#4CAF50",
+                                    "#FF5733",
+                                    "#FFC300",
+                                    "#33C3FF",
+                                    "#FF33C4",
+                                    "#33FF57",
+                                ],
+                                borderWidth: 1,
+                            },
+                        ],
+                    },
+                    options: {
+                        scales: {
+                            y: {
+                                beginAtZero: true,
+                            },
+                        },
+                    },
+                });
+            }
+        }
+
+
+
+    document.addEventListener("DOMContentLoaded", () => {
+        const form = document.getElementById("mood-form");
+        const moodSelect = document.getElementById("mood");
+        const moodChartCtx = document
+            .getElementById("mood-chart")
+            .getContext("2d");
+
+        // Load existing moods from local storage
+        const moods = JSON.parse(localStorage.getItem("moodTracker")) || [];
+
+        // Define the chart variable outside the function so it can be updated
+
+        // Save mood to local storage and update history and chart
+        form.addEventListener("submit", (e) => {
+            e.preventDefault();
+            const mood = moodSelect.value;
+            if (!mood) return;
+
+            // Capture the current date and time
+            const now = new Date();
+            const date = now.toLocaleDateString(); // Format the date
+            const time = now.toLocaleTimeString(); // Format the time
+
+            // Save both date and time with the mood
+            moods.push({ date, time, mood });
+            localStorage.setItem("moodTracker", JSON.stringify(moods));
+            updateMoodHistory();
+            updateChart();
+            moodSelect.value = "";
+        });
+
+        // Update the mood history list to show only the latest 2 entries
+        
+
+        // Initialize the app
+        updateMoodHistory();
+        updateChart();
+    });
+
+
+
+    // quiz
+    
+    function loadQuiz() {
+        const questions = [
+            "How often do you feel overwhelmed by daily tasks?",
+            "How often do you have trouble sleeping?",
+            "Do you feel anxious without any specific reason?",
+            "Do you often feel down or hopeless?",
+            "How often do you struggle to enjoy activities you used to like?",
+            "Do you find it hard to focus on work or studies?",
+            "How often do you feel isolated or lonely?",
+            "Do you get easily irritated or angry?",
+            "How often do you feel tired or have low energy?",
+            "Do you worry about your health frequently?",
+            "How often do you avoid social situations?",
+            "Do you experience sudden mood changes?",
+            "How often do you feel restless or unable to relax?",
+            "Do you struggle with low self-esteem?",
+            "How often do you feel nervous or on edge?",
+            "Do you have difficulty managing your stress levels?",
+            "How often do you feel like crying without any particular reason?",
+            "Do you experience frequent headaches or physical tension?",
+            "How often do you feel guilty or blame yourself?",
+            "Do you feel disconnected from reality at times?",
+            "How often do you feel out of control with your emotions?",
+            "Do you find it hard to make decisions?",
+            "How often do you engage in negative self-talk?",
+            "Do you feel like your mind is racing with thoughts?",
+            "How often do you feel unmotivated or apathetic?",
+        ];
+
+        // Function to shuffle and select 10 random questions
+        function getRandomQuestions(questions) {
+            return questions.sort(() => 0.5 - Math.random()).slice(0, 10);
+        }
+
+        // Get random questions and render them
+        const randomQuestions = getRandomQuestions(questions);
+        const questionsContainer = document.getElementById("questionsContainer");
+        questionsContainer.innerHTML = "";
+
+        randomQuestions.forEach((question, index) => {
+            const questionDiv = document.createElement("div");
+            questionDiv.classList.add("question");
+            questionDiv.innerHTML = `
+            <p>${index + 1}. ${question}</p>
+            <label><input type="radio" name="q${index + 1
+                }" value="1"> Rarely</label>
+            <label><input type="radio" name="q${index + 1
+                }" value="2"> Sometimes</label>
+            <label><input type="radio" name="q${index + 1
+                }" value="3"> Often</label>
+            <label><input type="radio" name="q${index + 1
+                }" value="4"> Always</label>
+        `;
+            questionsContainer.appendChild(questionDiv);
+        });
+
+        document
+            .getElementById("quizForm")
+            .addEventListener("submit", function (event) {
+                event.preventDefault();
+
+                let score = 0;
+
+                // Calculate the score based on selected answers
+                for (let i = 1; i <= 10; i++) {
+                    const selectedOption = document.querySelector(
+                        `input[name="q${i}"]:checked`
+                    );
+                    if (selectedOption) {
+                        score += parseInt(selectedOption.value);
+                    }
+                }
+
+                displayResult(score);
+                closeModal();
+            });
+    }
+
+    function displayResult(score) {
+        const result = document.getElementById("result");
+        const moodAnalysis = document.getElementById("moodAnalysis");
+        const meditationSuggestion = document.getElementById(
+            "meditationSuggestion"
+        );
+        const moods = JSON.parse(localStorage.getItem("moodTracker")) || [];
+        const now = new Date();
+        const date = now.toLocaleDateString(); // Format the date
+        const time = now.toLocaleTimeString(); // Format the time
+        let mood="";
+        if (score <= 10) {
+            mood="Happy";
+            moodAnalysis.textContent = "You are in a positive mood.";
+            meditationSuggestion.textContent = "Gratitude Meditation: Reflect on things you're grateful for to boost positivity.";
+        } else if (score <= 15) {
+        mood="Anxious";
+        moodAnalysis.textContent = "Your mood is generally good.";
+        meditationSuggestion.textContent = "Breathing Exercise: Deep, slow breaths to calm and relax.";
+    } else if (score <= 20) {
+        mood="Excited";
+        moodAnalysis.textContent = "You might be experiencing mild stress.";
+        meditationSuggestion.textContent = "Mindful Breathing: Focus on your breath to reduce stress.";
+    } else if (score <= 25) {
+        mood="Relaxed";
+        moodAnalysis.textContent = "You seem to be feeling anxious or stressed.";
+        meditationSuggestion.textContent = "Body Scan: Relax each body part to release tension.";
+    } else if (score <= 30) {
+        mood="Angry";
+        moodAnalysis.textContent = "You likely have high stress or anxiety.";
+        meditationSuggestion.textContent = "Guided Visualization: Imagine a peaceful place to reduce stress.";
+    } else {
+        mood="Sad";
+        moodAnalysis.textContent = "You appear under significant emotional distress.";
+        meditationSuggestion.textContent = "Guided Anxiety Relief: Follow a guided session to ease anxiety.";
+    }
+    
+        moods.push({ date, time, mood });
+            localStorage.setItem("moodTracker", JSON.stringify(moods));
+            updateMoodHistory();
+            updateChart();
+
+        result.classList.remove("hidden");
+    }
+
+    // Function to reset the quiz when the modal is closed
+    function resetQuiz() {
+        document.getElementById("quizForm").reset();
+        document.getElementById("result").classList.add("hidden");
+    }
+
+
+    // random services
+    document.addEventListener("DOMContentLoaded", () => {
+    // Function to shuffle and select random items
+    function getRandomItems(container, count) {
+        const items = Array.from(container.querySelectorAll('.card'));
+        const shuffledItems = items.sort(() => 0.5 - Math.random()).slice(0, count);
+        container.innerHTML = ""; // Clear existing items
+        shuffledItems.forEach(item => container.appendChild(item)); // Append only the selected items
+    }
+
+    // Select and update each container with random 3 items
+    const videoContainer = document.querySelector('.videos-container .container');
+    const articleContainer = document.querySelector('.article-container .container');
+    const podcastContainer = document.querySelector('.podcast-container .container');
+
+    // Update each section to show only 3 random items
+    getRandomItems(videoContainer, 3);
+    getRandomItems(articleContainer, 3);
+    getRandomItems(podcastContainer, 3);
+});
+
+</script>
+
+</html>

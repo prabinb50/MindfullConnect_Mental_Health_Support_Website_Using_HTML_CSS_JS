@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Ubuntu&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/resourcelibrary.css" />
+</head>
+
+<body>
+    <!-- header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">
+                <div class="img-div">
+                    <img src="images/logo.png" alt="">
+                </div>
+                <div>
+                    <h2>MindFullConnect</h2>
+                </div>
+            </div>
+            <div class="mobile-nav-btn">
+                <button onclick="openNav()">
+                    <img src="images/Hamburger_icon.svg.png" alt="">
+                </button>
+            </div>
+            <div id="mobile-nav" class="mobile-nav">
+                <div class="cross-icon">
+                    <button onclick="closeNav()">
+                        <svg fill="#000000" height="20px" width="20px" version="1.1" id="Capa_1"
+                            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            viewBox="0 0 490 490" xml:space="preserve">
+                            <polygon points="456.851,0 245,212.564 33.149,0 0.708,32.337 212.669,245.004 0.708,457.678 33.149,490 245,277.443 456.851,490 
+                            489.292,457.678 277.331,245.004 489.292,32.337 " />
+                        </svg>
+                    </button>
+                </div>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="resourcelibrary.html" class="active">Resources Library</a></li>
+                    <li><a href="interactiveTools.html">Interactive Tools</a></li>
+                    <li><a href="professionalTools.html">Professional Service</a></li>
+                    <li><a href="emergencyService.html">Emergency Service</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <!--end of header -->
+
+
+    <!-- content section -->
+    <div class="content">
+        <!-- Filter Buttons -->
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-keyword="anxiety">Anxiety</button>
+            <button class="filter-btn active" data-keyword="depression">Depression</button>
+            <button class="filter-btn active" data-keyword="ptsd">PTSD</button>
+            <button class="filter-btn active" data-keyword="mental-health">Mental Health</button>
+            <button class="filter-btn active" data-keyword="ocd">OCD</button>
+        </div>
+
+        <!-- Filtered Content Section -->
+        <div class="filtered-content">
+
+            <!-- Videos Section -->
+            <div class="videos-container">
+                <div class="main-title-div">
+                    <h2 class="title main-title">Videos</h2>
+                </div>
+
+                <div class="container">
+                    <!-- Video - Anxiety -->
+                    <div class="content-card" data-keywords="anxiety mental-health">
+                        <div class="img-div">
+                            <video src="videos/Dear Anxiety __ Spoken Word.mp4" controls></video>
+                        </div>
+                        <h2 class="title">Dear Anxiety __ Spoken Word</h2>
+                    </div>
+
+                    <div class="content-card" data-keywords="anxiety depression">
+                        <div class="img-div">
+                            <video
+                                src="videos/People With Anxiety & Depression Share Advice For Anyone Who s Struggling _ Soul Stories.mp4"
+                                controls></video>
+                        </div>
+                        <h2 class="title">People With Anxiety & Depression Share Advice For Anyone Who's Struggling _
+                            Soul Stories</h2>
+                    </div>
+
+                    <div class="content-card" data-keywords="anxiety">
+                        <div class="img-div">
+                            <video
+                                src="videos/So, You re Having an Anxiety Attack (The Calm-Down Method for Stopping Anxiety Attacks).mp4"
+                                controls></video>
+                        </div>
+                        <h2 class="title">So, You’re Having an Anxiety Attack (The Calm-Down Method for Stopping Anxiety
+                            Attacks)</h2>
+                    </div>
+
+                    <!-- Video - Depression -->
+                    <div class="content-card" data-keywords="depression mental-health">
+                        <div class="img-div">
+                            <video src="videos/Feeling Lost in Your 20s.mp4" controls></video>
+                        </div>
+                        <h2 class="title">Feeling Lost in Your 20s</h2>
+                    </div>
+
+                    <!-- Video - Mental Health -->
+                    <div class="content-card" data-keywords="mental-health">
+                        <div class="img-div">
+                            <video src="videos/Mental Health Awareness.mp4" controls></video>
+                        </div>
+                        <h2 class="title">Mental Health Awareness</h2>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Articles Section -->
+            <div class="article-container">
+                <div class="main-title-div">
+                    <h2 class="title main-title">Articles</h2>
+                </div>
+
+                <div class="container">
+                    <!-- Article - Anxiety -->
+                    <div class="content-card" data-keywords="anxiety mental-health">
+                        <a href="articles/managing-anxiety.html">
+                            <div class="img-div">
+                                <img src="images/article/anxiety.webp" alt="">
+                            </div>
+                            <h2 class="title">Managing Anxiety: Practical Tips to Calm Your Mind</h2>
+                        </a>
+                    </div>
+
+                    <!-- Article - Depression -->
+                    <div class="content-card" data-keywords="depression">
+                        <a href="articles/overcoming-depression.html">
+                            <div class="img-div">
+                                <img src="images/article/depression.webp" alt="">
+                            </div>
+                            <h2 class="title">Overcoming Depression: Steps to Reclaim Your Life</h2>
+                        </a>
+                    </div>
+
+                    <!-- Article - PTSD -->
+                    <div class="content-card" data-keywords="ptsd">
+                        <a href="articles/understanding-ptsd.html">
+                            <div class="img-div">
+                                <img src="images/article/ptsd.webp" alt="">
+                            </div>
+                            <h2 class="title">Understanding PTSD: Pathways to Healing After Trauma</h2>
+                        </a>
+                    </div>
+
+                    <!-- Article - OCD -->
+                    <div class="content-card" data-keywords="ocd">
+                        <a href="articles/living-with-ocd.html">
+                            <div class="img-div">
+                                <img src="images/article/ocd.webp" alt="">
+                            </div>
+                            <h2 class="title">Living with OCD: Understanding and Managing Obsessive-Compulsive Disorder
+                            </h2>
+                        </a>
+                    </div>
+
+                    <!-- Article - Mental Health -->
+                    <div class="content-card" data-keywords="mental-health">
+                        <a href="articles/managing-bipolar-disorder.html">
+                            <div class="img-div">
+                                <img src="images/article/bipolar.webp" alt="">
+                            </div>
+                            <h2 class="title">Managing Bipolar Disorder: Finding Balance in Mood Swings</h2>
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <!-- Podcasts Section -->
+            <div class="podcast-container">
+                <div class="main-title-div">
+                    <h2 class="title main-title">Podcasts</h2>
+                </div>
+
+                <div class="container">
+                    <!-- Podcast - Depression -->
+                    <div class="content-card" data-keywords="depression">
+                        <a href="podcast/podcast.html?index=0">
+                            <div class="img-div">
+                                <img src="podcast/assets/images/1.webp" alt="">
+                            </div>
+                            <h2 class="title">Jordan Peterson’s Advice For People With Depression</h2>
+                        </a>
+                    </div>
+
+                    <div class="content-card" data-keywords="depression anxiety">
+                        <a href="podcast/podcast.html?index=1">
+                            <div class="img-div">
+                                <img src="podcast/assets/images/2.webp" alt="">
+                            </div>
+                            <h2 class="title">Kristen Bell on Living with Depression and Anxiety - Body Stories - SELF
+                            </h2>
+                        </a>
+                    </div>
+
+                    <div class="content-card" data-keywords="depression">
+                        <a href="podcast/podcast.html?index=5">
+                            <div class="img-div">
+                                <img src="podcast/assets/images/6.webp" alt="">
+                            </div>
+                            <h2 class="title">What is Depression? - Helen M. Farrell</h2>
+                        </a>
+                    </div>
+
+                    <!-- Podcast - PTSD -->
+                    <div class="content-card" data-keywords="ptsd">
+                        <a href="podcast/podcast.html?index=4">
+                            <div class="img-div">
+                                <img src="podcast/assets/images/5.webp" alt="">
+                            </div>
+                            <h2 class="title">Complex PTSD in 5 Minutes</h2>
+                        </a>
+                    </div>
+
+                    <!-- Podcast - Mental Health -->
+                    <div class="content-card" data-keywords="mental-health">
+                        <a href="podcast/podcast.html?index=2">
+                            <div class="img-div">
+                                <img src="podcast/assets/images/3.webp" alt="">
+                            </div>
+                            <h2 class="title">Are You Okay?</h2>
+                        </a>
+                    </div>
+
+                    <div class="content-card" data-keywords="mental-health">
+                        <a href="podcast/podcast.html?index=3">
+                            <div class="img-div">
+                                <img src="podcast/assets/images/4.webp" alt="">
+                            </div>
+                            <h2 class="title">WHEN YOU FEEL LIKE QUITTING - Best Inspiring Speech on Mental Health</h2>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End of Filtered Content Section -->
+
+    </div>
+    <!--end of content section -->
+
+    <!-- footer section -->
+    <div class="footer-section">
+        <div class="container">
+            <div class="card">
+                <div class="first-section">
+                    <div class="img-div">
+                        <img src="images/logo.png" alt="">
+                    </div>
+                    <h2 class="title">MindFullConnect</h2>
+                </div>
+            </div>
+
+            <div class="card quick-links-section">
+                <div>
+                    <h2 class="">QUICK LINKS</h2>
+                    <ul>
+                        <li><a href="index.html" class="active">Home</a></li>
+                        <li><a href="resourcelibrary.html">Resources Library</a></li>
+                        <li><a href="interactiveTools.html">Interactive Tools</a></li>
+                        <li><a href="professionalTools.html">Professional Service</a></li>
+                        <li><a href="emergencyService.html">Emergency Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card social-media-section">
+                <div class="">
+                    <h2 class="">Socials</h2>
+                    <div class="social-medias">
+                        <div class="facebook-icon">
+                            <i class="fa-brands fa-facebook"></i>
+                        </div>
+                        <div class="instagram-icon">
+                            <i class="fa-brands fa-instagram"></i>
+                        </div>
+                        <div class="twitter-icon">
+                            <i class="fa-brands fa-twitter"></i>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bottom-footer">
+        <h2>Copyright © 2024 <span>MindFullConnect</span>. All Rights Reserved</h2>
+    </div>
+    <!--end of footer section -->
+
+
+</body>
+
+<script>
+    function closeNav() {
+        var mobileNav = document.getElementById("mobile-nav");
+        mobileNav.classList.remove("active");
+    }
+    function openNav() {
+        var mobileNav = document.getElementById("mobile-nav");
+        mobileNav.classList.add("active");
+    }
+
+</script>
+
+<script>
+
+    document.addEventListener('DOMContentLoaded', function () {
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const cards = document.querySelectorAll('.content-card');
+    const sections = document.querySelectorAll('.videos-container, .article-container, .podcast-container');
+
+    filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            button.classList.toggle('active');
+            button.classList.toggle('inactive');
+
+            filterContent();
+        });
+    });
+
+    function filterContent() {
+        const activeKeywords = Array.from(filterButtons)
+            .filter(btn => btn.classList.contains('active'))
+            .map(btn => btn.dataset.keyword);
+
+        // Filter the cards based on the selected keywords
+        cards.forEach(card => {
+            // Ensure data-keywords exists and is not empty before splitting
+            const cardKeywords = card.dataset.keywords ? card.dataset.keywords.split(' ') : [];
+            const isVisible = activeKeywords.some(keyword => cardKeywords.includes(keyword));
+
+            // Show or hide the card based on keyword match
+            card.style.display = isVisible ? 'block' : 'none';
+        });
+
+        // Check each section to see if it has any visible cards
+        sections.forEach(section => {
+            // Find all cards within the section that are visible
+            const visibleCards = Array.from(section.querySelectorAll('.content-card')).filter(
+                card => card.style.display !== 'none'
+            );
+
+            // Show the section if it has visible cards, otherwise hide it
+            section.style.display = visibleCards.length > 0 ? 'block' : 'none';
+        });
+    }
+
+    // Initial filter to show all content
+    filterContent();
+});
+
+</script>
+
+</html>
