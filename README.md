@@ -16,3 +16,6 @@ MindfullConnect is a **frontend website** developed to provide comprehensive men
 - **Swiper.js**: For creating dynamic, responsive carousels on the homepage.
 - **Tawk.to**: For live chat integration, enabling real-time support.
 - **JavaScript (Quiz Modal)**: Powers the interactive quiz feature that selects 10 random questions from a set of 25 to assess the user’s mental health state.
+
+
+hlo hlo
