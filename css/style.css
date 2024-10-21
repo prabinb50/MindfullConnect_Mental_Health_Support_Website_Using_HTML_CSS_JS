@@ -82,6 +82,10 @@ body{
     width: 100%; /* Full width underline for active class */
 }
 
+.social-medias a {
+    color: white;  
+}
+
 /* footer section */
 .footer-section{
     background-color: rgb(37, 37, 37);

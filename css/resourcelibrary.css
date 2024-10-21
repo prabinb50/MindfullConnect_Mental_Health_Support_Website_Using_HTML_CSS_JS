@@ -191,6 +191,10 @@ a:hover {
     background-color: #0056b3;
 }
 
+.social-medias a {
+    color: white;  
+}
+
 /* Responsive Styles */
 @media (max-width: 768px) {
     .filter-btn {

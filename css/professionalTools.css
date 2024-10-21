@@ -89,6 +89,11 @@ display: -webkit-box;
     letter-spacing: 1px;
     font-weight: 200 !important;
 }
+
+.social-medias a {
+    color: white;  
+}
+
 @media (max-width:768px){
     .content  .container{
       grid-template-columns: repeat(1, minmax(0, 1fr));
